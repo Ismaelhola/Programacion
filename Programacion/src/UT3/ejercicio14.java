@@ -17,6 +17,7 @@ public class ejercicio14 {
 		float precio;
 		int opcion;
 		
+		do {
 		System.out.println("¿Cual es el precio del vuelo?");
 		Scanner scp=new Scanner(System.in);
 		precio= scp.nextFloat();
@@ -57,6 +58,10 @@ public class ejercicio14 {
 			}
 		}
 		System.out.println("El precio del vuelo es " +precio);
-	}
+		System.out.println("Si quieres salir indroduca 2" );
+		Scanner sco6=new Scanner(System.in);
+		opcion=sco6.nextInt();
+	}while(opcion!=2);
 
+}
 }
