@@ -21,6 +21,7 @@ public class ejercicio19 {
 			Scanner ssc= new Scanner(System.in);
 			suma= ssc.nextInt();
 			numero= numero+suma;
+			System.out.println("PUTO");
 			
 		}while(suma !=0);
 
