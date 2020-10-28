@@ -14,32 +14,39 @@ public class semana3 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		float largo;
-		float ancho;
-		int opcion;
-		do{
-			System.out.println("Escribe el largo del campo a comparar en metros:");
-			Scanner lsc= new Scanner(System.in);
-			largo= lsc.nextFloat();
+		int superficie;
+		int metros2;
+		int minimo;
+		int maximo;
+		int division;
+		
+		minimo=90*45;
+		maximo=120*90;
+		
+		do {
+			System.out.println("Escribe la superficie");
+			Scanner scs=new Scanner(System.in);
+			superficie=scs.nextInt();
 			
-			System.out.println("Escribe el ancho del campo a comparar en metros:");
-			Scanner asc= new Scanner(System.in);
-			ancho= asc.nextFloat();
-			
-			if(largo>=90 && largo<=120){
-				if(ancho>=45 && ancho<=90) {
-					System.out.println("si");
+			if(superficie!=0) {
+				System.out.println("Escribe la estimacion en campos de futbol");
+				Scanner scm2=new Scanner(System.in);
+				metros2=scm2.nextInt();
+				if(metros2!=0) {
+					division=superficie/metros2;
+					if(division>=minimo && division<=maximo) {
+						System.out.println("si es correcta");
+					}else {
+						System.out.println("no es correcto");
+					}
 				}else {
-					System.out.println("no");
+					System.out.println("ERROS");
 				}
 			}else {
-				System.out.println("no");
+				System.out.println("ERROS");
 			}
-			System.out.println("Si quieres salir escribe un 0 si no escribe cualquier numero");
-			Scanner osc= new Scanner(System.in);
-			opcion= osc.nextInt();
 			
-		}while(opcion!=0);
+		}while(superficie!=0);
 
 }
 }
