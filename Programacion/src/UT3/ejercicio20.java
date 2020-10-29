@@ -16,7 +16,7 @@ public class ejercicio20 {
 		// TODO Auto-generated method stub
 		int numero=0;
 		int suma;
-		float contador=0;
+		float contador=-1;
 		
 		do {
 			System.out.println("Escribe un numero entero:");
