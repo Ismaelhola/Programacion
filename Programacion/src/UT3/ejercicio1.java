@@ -18,6 +18,8 @@ public class ejercicio1 {
 		
 		int numero1=100;
 		
+		
+		
 		System.out.printf("%d X 1 = %d \n", numero1, numero1*1); 
 
 		System.out.printf("%d X 2 = %d \n", numero1, numero1*2); 
