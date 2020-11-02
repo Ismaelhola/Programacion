@@ -38,6 +38,7 @@ public class ejercicio1 {
 
 		System.out.printf("%d X 10 = %d \n", numero1, numero1*10); 
 		//prueba
+		//prueba 2
 
 	}
 
