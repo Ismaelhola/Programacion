@@ -3,11 +3,12 @@
  */
 package UT3;
 import java.util.Scanner;
+
 /**
- * @author Usuario
+ * @author Ismael m
  *
  */
-public class ejercicio21 {
+public class ejercicio21_1 {
 
 	/**
 	 * @param args
@@ -18,10 +19,10 @@ public class ejercicio21 {
 		int suma;
 		float contador=-1;
 		int mayor=0;
-		Float infinito = Float.POSITIVE_INFINITY;
-		float menor;
+		int menor=0;
+		float media;
 			
-		menor=infinito;
+		
 		do {
 			System.out.println("Escribe un numero:");
 			Scanner scs=new Scanner(System.in);
@@ -29,20 +30,27 @@ public class ejercicio21 {
 			numero=numero+suma;
 			contador=contador+1;
 			
+			if(contador==0) {
+				menor=suma;
+				mayor=suma;
+			}
+			
 			if(suma!=0) {
 				
 				if(suma>mayor) {
 					mayor=suma;
 				}
 				if(suma<menor) {
-					menor=(float) suma;
+					menor=suma;
 				}
 			}
 		}while(suma!=0);
+		
+		media=numero/contador;
 		System.out.printf("La suma total es %d\n",numero);
-		System.out.printf("La media es %5.2f\n",numero/contador);
+		System.out.printf("La media es %5.2f\n",media);
 		System.out.printf("El mayor es %d\n",mayor);
-		System.out.printf("El menor es %1.0f\n",menor);
+		System.out.printf("El menor es %d\n",menor);
 
 	}
 

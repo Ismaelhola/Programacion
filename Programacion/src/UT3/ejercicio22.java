@@ -23,8 +23,7 @@ public class ejercicio22 {
 		Scanner scn=new Scanner(System.in);
 		numero=scn.nextInt();
 		System.out.println("Escribe la potencia a calcular:");
-		Scanner scm=new Scanner(System.in);
-		multiplo=scm.nextInt();
+		multiplo=scn.nextInt();
 		
 		base=numero;
 		
@@ -34,6 +33,8 @@ public class ejercicio22 {
 		}while(contador!=multiplo);
 		
 		System.out.printf("El calculo es %d",numero);
+		
+		scn.close();
 
 	}
 
