@@ -18,6 +18,7 @@ public class Ejercicio1 {
 			System.out.print("Hola Mundo");
 
 			System.out.print("Adios Mundo");
+			
 	}
 
 }
