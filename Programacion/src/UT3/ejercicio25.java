@@ -14,11 +14,27 @@ public class ejercicio25 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		
 		int numero;
+		int contador=1;
+		int contador2=0;
 		
-		System.out.println("Escribe el numero para decir si es primo o no:");
-		Scanner scn=new Scanner(System.in);
+		System.out.println("Escribe un numero:");
+		numero=sc.nextInt();
 		
+		do {
+			if(numero %contador==0) {
+				contador2=contador2+1;
+			}
+			contador=contador+1;
+		}while(contador<=numero);
+		
+		if(contador2<=2) {
+			System.out.println("Es un numero primo");
+		}else {
+			System.out.println("No es un numero primo");
+		}
 
 	}
 
