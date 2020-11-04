@@ -16,6 +16,10 @@ public class Ejercicio1 {
 		// TODO Auto-generated method stub
 
 			System.out.print("Hola Mundo");
+			
+			System.out.print("Hola Mundo");
+			
+			System.out.print("Hola Mundo");
 
 			System.out.print("Adios Mundo");
 			
