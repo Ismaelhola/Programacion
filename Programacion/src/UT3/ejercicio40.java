@@ -35,7 +35,7 @@ public class ejercicio40 {
 			do {
 				System.out.printf(" ");
 				contadorin2=contadorin2+1;
-			}while(contadorin2!=contadorin);
+			}while(contadorin2<contadorin);
 			do {
 				System.out.printf("* ");
 				contador2=contador2+1;
@@ -43,6 +43,8 @@ public class ejercicio40 {
 			System.out.println();
 			contadorin=contadorin-1;
 		}while(contador!=numero);
+		
+		sc.close();
 
 	}
 

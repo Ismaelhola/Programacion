@@ -30,7 +30,7 @@ public class ejercicio37 {
 		do {
 			contador2=0;
 			do {
-				System.out.printf("*");
+				System.out.printf("* ");
 				contador2=contador2+1;
 			}while(contador2!=base);
 			System.out.println();
