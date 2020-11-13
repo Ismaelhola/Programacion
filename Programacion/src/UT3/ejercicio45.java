@@ -46,6 +46,8 @@ public class ejercicio45 {
 			System.out.println();
 			
 		}while(contador!=numero);
+		
+		sc.close();
 
 	}
 
