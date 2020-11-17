@@ -34,6 +34,8 @@ public class ejercicio64 {
 		for(int i=0;i<numero1.length;i++) {
 			System.out.printf("%dº %d,%d\n",i+1,numero1[i],numero2[i]);
 		}
+		
+		sc.close();
 
 	}
 

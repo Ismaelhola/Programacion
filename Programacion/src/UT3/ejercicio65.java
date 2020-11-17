@@ -46,6 +46,8 @@ public class ejercicio65 {
 				}
 			}
 		}
+		
+		sc.close();
 
 	}
 

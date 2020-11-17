@@ -36,6 +36,8 @@ public class ejercicio49 {
 		
 		System.out.printf("Esta el la suma de todos los numeros: %d",suma);
 		
+		sc.close();
+		
 	}
 
 }
