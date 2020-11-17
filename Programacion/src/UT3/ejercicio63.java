@@ -18,6 +18,8 @@ public class ejercicio63 {
 		
 		int numero[];
 		int media=0;
+		int mayor=0;
+		int menor=0;
 		
 		numero=new int[10];
 		
@@ -29,6 +31,21 @@ public class ejercicio63 {
 		for(int i=0; i<10; i++) {
 			System.out.printf("%d\n",numero[i]);
 		}
+		
+		for(int i=0; i<10; i++) {
+			if(i==0) {
+				mayor=numero[i];
+				menor=numero[i];
+			}
+			if(mayor<numero[i]) {
+				mayor=numero[i];
+			}
+			if(menor>numero[i]) {
+				menor=numero[i];
+			}
+		}
+		System.out.printf("El mayor es: %d\n",mayor);
+		System.out.printf("El menor es: %d\n",menor);
 		
 		for(int i=0; i<10; i++) {
 			media=media+numero[i];
