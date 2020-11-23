@@ -18,7 +18,7 @@ public class semana5 {
 		
 		int numero[]=new int[4];
 		char palo[]=new char[4];
-		int contador[]=new int[2];
+		int contador[]=new int[3];
 		
 		System.out.println("En este programa que te dice la carta que te falta para hacer escalera de color");
 		System.out.println("Estos son los palos del programa:");
@@ -74,8 +74,8 @@ public class semana5 {
 			}
 		}
 		
-		if(contador[0]==3) {
-			if(contador[1]==3) {
+		if(contador[1]==3) {
+			if(contador[0]==3) {
 				if(numero[3]==2 || numero[0]==14) {
 					if(numero[3]==2) {
 						System.out.println("Falta un "+(numero[0]+1)+" "+palo[0]+" para hacer escalera de color");
@@ -86,7 +86,14 @@ public class semana5 {
 					System.out.println("Falta un "+(numero[3]-1)+" "+palo[0]+" o un "+numero[0]+" "+palo[0]+" para hacer escalera de color");
 				}
 			}else {
-				System.out.println("no es posible hacer la escalera de color");
+				if(contador[0]==2) {
+					for(contador[2]=0;numero[contador[2]+1]!=(numero[contador[2]]-1);contador[2]++) {
+					contador[0]++;
+					}
+					System.out.println("Falta un "+(numero[contador[2]]+1)+" "+palo[0]+" para hacer escalera de color");
+				}else {
+					System.out.println("no es posible hacer la escalera de color");					
+				}
 			}
 		}else {
 			System.out.println("no es posible hacer la escalera de color");
