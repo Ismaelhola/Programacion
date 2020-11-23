@@ -20,14 +20,28 @@ public class semana5 {
 		char palo[]=new char[4];
 		int contador[]=new int[2];
 		
+		System.out.println("En este programa que te dice la carta que te falta para hacer escalera de color");
+		System.out.println("Estos son los palos del programa:");
+		System.out.println("d = diamantes");
+		System.out.println("p = picas");
+		System.out.println("t = treboles");
+		System.out.println("c = corazon");
+		
 		for(int i=0;i<numero.length; i++) {
 			System.out.printf("Escribe el numero de la %dº carta:\n",i+1);
 			numero[i]=sc.nextInt();
 			System.out.printf("Escribe el palo de la %dº carta:\n",i+1);
 			palo[i]=sc.next().charAt(0);
 			
-			if(numero[i]<1 || numero[i]>14) {
+			if(numero[i]>1 || numero[i]<14 ) {
+				if(palo[i] == 'd'||palo[i] == 'p'||palo[i] == 't'||palo[i] == 'c') {
+					
+				}else {
 				System.out.println("Esta carta no existe escribe otra");
+				i=i-1;
+				}
+			}else {
+				System.out.println("Esta carta no existe escribe otra");	
 				i=i-1;
 			}
 		}
