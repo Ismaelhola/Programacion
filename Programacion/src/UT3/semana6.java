@@ -90,12 +90,12 @@ public class semana6 {
 			}
 			
 			if(contador3==contador4) {
-				System.out.println("hola");
+				System.out.println("Es un anagrama");
 			}else {
-				System.out.println("adios");
+				System.out.println("no es un anagrama");
 			}
 		}else {
-			System.out.println("adios");
+			System.out.println("no es un anagrama");
 		}
 		
 		sc.close();
