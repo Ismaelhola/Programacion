@@ -9,6 +9,8 @@ package actividades;
  */
 public class Persona {
 	
+	//las variables de persona privadas
+	
 	private String nombre;
 	private String apellidos;
 	private int anioNacimiento;
@@ -20,6 +22,8 @@ public class Persona {
 		
 	}
 	
+	//relleno de las variables
+	
 	public Persona(String nombre, String apellidos, int ano, int mes, int dia, char sexo) {
 		this.nombre=nombre;
 		this.apellidos=apellidos;
@@ -28,6 +32,8 @@ public class Persona {
 		this.diaNacimiento=dia;
 		this.sexo=sexo;
 	}
+	
+	//los get de cada variable
 	
 	public String Getnombre() {
 		return this.nombre;
@@ -51,6 +57,8 @@ public class Persona {
 		int edad = java.time.LocalDate.now().getYear() - this.anioNacimiento;
 		return edad;
 	}
+	
+	//los set con los filtros de cada variable
 	
 	public void Setnombre(String nombre) {
 		
@@ -99,12 +107,19 @@ public class Persona {
 		this.sexo=sexo;
 	}
 	
+	//la frase del saludo que sale por pantalla
+	
 	public String saludar() {
 		return "hola soy "+nombre+" "+apellidos+" y naci el "+diaNacimiento+"/"+mesNacimiento+"/"+anioNacimiento;
 	}
+	
+	//la frase con la edad que sale por pantalla
+	
 	public String mostraredad() {
 		return "En la actualidad tengo "+Getedad();
 	}
+	
+	//si la primera letra del nombre y de los dos apellidos no esta en mayuscula te la cambia
 	
 	private String mayuscula(String palabra) {
 		String npalabra = palabra.toLowerCase();
@@ -123,7 +138,7 @@ public class Persona {
 		String palabrac="";
 		
 		for(int i=0; i<array.length; i++) {
-			palabrac=palabrac+array+" ";
+			palabrac=palabrac+array[i]+" ";
 		}
 		return palabrac;
 	}
