@@ -33,7 +33,7 @@ public class ejercicio81 {
 		n1=sc.nextInt();
 		System.out.println("Escribe un numero");
 		n2=sc.nextInt();
-		array=new int[n2];
+		array=new int[contador(n1,n2,1)];
 		
 		array=array(array,n1,n2,1);
 		pinta(array);
@@ -49,6 +49,8 @@ public class ejercicio81 {
 		
 		array=array(array,n1,n2,in);
 		pinta(array);
+		
+		sc.close();
 		
 	}
 	private static void inter(int inicio,int fin) {
