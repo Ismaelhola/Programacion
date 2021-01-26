@@ -9,15 +9,18 @@ package actividades;
  */
 public class libros {
 	
+	//las variables del objeto que estan en privado
 	private String titulo;
 	private String autor;
 	private int ejemplares;
 	private int prestados;
 	
+	//contrustor vacio por defecto
 	public libros() {
 		
 	}
 	
+	//constructor de las variables
 	public libros(String t, String a, int e, int p) {
 		settitulos(t);
 		setautor(a);
@@ -25,6 +28,7 @@ public class libros {
 		setprestados(p);
 	}
 	
+	//los getes 
 	public String gettitulo() {
 		return this.titulo;
 	}
@@ -38,6 +42,7 @@ public class libros {
 		return this.prestados;
 	}
 	
+	//los setes
 	public void settitulos(String t) {
 		this.titulo=t;
 	}
@@ -51,6 +56,7 @@ public class libros {
 		this.prestados=p;
 	}
 	
+	//funcion para los prestamos
 	public Boolean prestar() {
 		Boolean r = false;
 		if(this.prestados<this.ejemplares) {
@@ -62,6 +68,7 @@ public class libros {
 		return r;
 	}
 	
+	//funcion para las devulciones
 	public Boolean devolver() {
 		Boolean r = false;
 		if(this.prestados>0) {
@@ -73,9 +80,10 @@ public class libros {
 		return r;
 	}
 	
+	//toString para mostar el contenido de los libros 
 	@Override
 	public String toString() {
-		return "El libro"+this.titulo+" del autor "+this.autor+" tiene "+this.ejemplares+"y ahora estan prestados "+this.prestados;
+		return "El libro "+this.titulo+" del autor "+this.autor+" tiene "+this.ejemplares+" ejemplares y ahora estan prestados "+this.prestados;
 	}
 	
 }
