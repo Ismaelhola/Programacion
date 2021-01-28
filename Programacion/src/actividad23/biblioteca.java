@@ -16,7 +16,6 @@ public class biblioteca {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sco=new Scanner(System.in);
 		Scanner scn=new Scanner(System.in);
 		Scanner sct=new Scanner(System.in);
 		
@@ -29,8 +28,14 @@ public class biblioteca {
 		
 		do {
 			
-			menu();
-			opcion=sco.nextInt();
+			System.out.println("Estas son las opciones:");
+			System.out.println("1. Alta libro.");
+			System.out.println("2. Consulta libro.");
+			System.out.println("3. Baja libro.");
+			System.out.println("4. Prestamos de libro.");
+			System.out.println("0. salir.");
+			System.out.println("Escribe tu opcion:");
+			opcion=scn.nextInt();
 			
 			switch(opcion) {
 			case 0:
@@ -47,6 +52,10 @@ public class biblioteca {
 				System.out.println("Cuantos ejemplares se han prestado:");
 				prestados=scn.nextInt();
 				
+				if(ejemplares<prestados) {
+					prestados=0;
+				}
+				
 				catalogo.add(new Libros(titulo,autor,ejemplares,prestados));
 				
 				System.out.println("Ya se a guardado tu libro.");
@@ -54,27 +63,26 @@ public class biblioteca {
 			case 2:
 				System.out.println("Has elegido que te mostremos los libros que tenemos.");
 				System.out.println("Estos son los libros que tenemos actualmente:");
+				for(int i=0; i<catalogo.size(); i++) {
+					System.out.println("Libro "+catalogo.get(i).gettitulo()+" del autor "+catalogo.get(i).getautor()+" y tienes "+catalogo.get(i).getejemplares()+" ejemplares y hay prestados "+catalogo.get(i).getprestados());
+				}
 				
 				break;
 			case 3:
 				System.out.println("Has elegido dar de baja un libro.");
 				System.out.println("Dime el titulo del libro que quieres dar de baja");
+				titulo=sct.nextLine();
+				for(int i=0; i<catalogo.size(); i++) {
+					if(catalogo.get(i).gettitulo().equals(titulo)) {
+						catalogo.remove(i);
+						System.out.println("Ya se a dado de baja el libro");
+					}
+				}
+				break;
 				
 			}
 		}while(opcion!=0);
 
-	}
-	
-	private static void menu() {
-		
-		System.out.println("Estas son las opciones:");
-		System.out.println("1. Alta libro.");
-		System.out.println("2. Consulta libro.");
-		System.out.println("3. Baja libro.");
-		System.out.println("4. Prestamos de libro.");
-		System.out.println("0. salir.");
-		System.out.println("Escribe tu opcion:");
-		
 	}
 	
 }
