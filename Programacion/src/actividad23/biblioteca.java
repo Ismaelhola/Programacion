@@ -51,6 +51,9 @@ public class biblioteca {
 				break;				
 			}
 		}while(opcion!=0);
+		
+		scn.close();
+		sct.close();
 
 	}
 	private static int menu(Scanner sc) {
