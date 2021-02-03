@@ -15,11 +15,6 @@ public class actividad24 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sc= new Scanner(System.in);
-		
-		Nif dni= new Nif(0,' ');
-		
-		
 		
 	}
 

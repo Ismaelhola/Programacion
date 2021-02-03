@@ -2,7 +2,6 @@
  * 
  */
 package actividad24;
-import java.util.Scanner;
 
 /**
  * @author Ismael m
@@ -12,13 +11,14 @@ public class Nif {
 	private int numero;
 	private char letra;
 	
-	public Nif() {
-		
+	public Nif(){
+		this.numero=0;
+		this.letra=' ';
 	}
 	
-	public Nif(int n, char l) {
+	public Nif(int n) {
 		setnumero(n);
-		setletra(l);
+		this.letra=calculol(n);
 	}
 	
 	public int getnumero() {
@@ -31,23 +31,21 @@ public class Nif {
 	public void setnumero(int n) {
 		this.numero=n;
 	}
-	public void setletra(char l) {
-		if(l!=calculoletra()) {
-			l=calculoletra();
-		}
-		this.letra=l;
+	
+	private char calculol(int n) {
+		char[] l = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'}; 
+    	return l[n % 23];
 	}
 	
-	private char calculoletra() {
-		char[] l = {'T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'};
-		return l[this.numero%23];
+	public void leer(int n) {
+		this.numero=n;
+		this.letra=calculol(n);
 	}
 	
-	public void leer(Scanner sc) {
-		System.out.println("Escribe el numero del dni");
-		setnumero(sc.nextInt());
-		setletra(calculoletra());
-		
+	@Override
+	public String toString() {
+		String n= String.format("%08d",numero);
+		return n+"-"+this.letra;
 	}
 
 }
