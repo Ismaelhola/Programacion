@@ -25,5 +25,7 @@ public class Playlist {
 	public void metercancion(String t, String a, int d) {
 		canciones.add(new Cancion(t,a,d));
 	}
+	
+	
 
 }
